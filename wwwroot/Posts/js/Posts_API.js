@@ -1,6 +1,6 @@
 
 class Posts_API {
-    static API_URL() { return "https://brave-absorbed-cherry.glitch.me/api/posts" };
+    static API_URL() { return "https://accessible-malleable-bovid.glitch.me/api/posts" };
     static initHttpState() {
         this.currentHttpError = "";
         this.currentStatus = 0;

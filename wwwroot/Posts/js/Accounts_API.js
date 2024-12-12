@@ -1,7 +1,7 @@
 class Accounts_API {
-    static API_URL() { return "https://brave-absorbed-cherry.glitch.me/api/accounts"; }
-    static CONTROLLER_URL() { return "https://brave-absorbed-cherry.glitch.me/accounts"; }
-    static LIKES_URL() { return "https://brave-absorbed-cherry.glitch.me/likes"; }
+    static API_URL() { return "https://accessible-malleable-bovid.glitch.me/api/accounts"; }
+    static CONTROLLER_URL() { return "https://accessible-malleable-bovid.glitch.me/accounts"; }
+    static LIKES_URL() { return "https://accessible-malleable-bovid.glitch.me/likes"; }
 
     static initHttpState() {
         this.currentHttpError = "";

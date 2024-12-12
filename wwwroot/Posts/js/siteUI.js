@@ -343,7 +343,7 @@ function updateDropDownMenu() {
         console.log(sessionUser.Avatar);
         DDMenu.append(`
             <div class="dropdown-item"">
-                <img id="userAvatar" src="" alt="User Avatar" class="UserAvatarXSmall">
+                <img id="userAvatar" src="wwwroot/${sessionUser.Avatar}" alt="User Avatar" class="UserAvatarXSmall">
                 <span id="userName">${sessionUser.Name}</span>
             </div>
             <div class="dropdown-divider"></div>
@@ -999,7 +999,7 @@ function renderAccountCreationForm(account = null) {
 
     initImageUploaders();
     initFormValidation();
-    addConflictValidation("https://brave-absorbed-cherry.glitch.me", "Email", "saveAccount");
+    addConflictValidation("https://accessible-malleable-bovid.glitch.me", "Email", "saveAccount");
     
 
     $('#accountForm').on("submit", async function (event) {
