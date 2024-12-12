@@ -999,7 +999,7 @@ function renderAccountCreationForm(account = null) {
 
     initImageUploaders();
     initFormValidation();
-    addConflictValidation("https://sand-adhesive-paneer.glitch.me", "Email", "saveAccount");
+    addConflictValidation("https://imaginary-omniscient-chopper.glitch.me", "Email", "saveAccount");
     
 
     $('#accountForm').on("submit", async function (event) {
