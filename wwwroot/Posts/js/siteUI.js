@@ -340,9 +340,10 @@ function updateDropDownMenu() {
                 <div class="dropdown-divider"></div>
             `;
         }
+        console.log(sessionUser.Avatar);
         DDMenu.append(`
             <div class="dropdown-item"">
-                <img id="userAvatar" src="wwwroot/${sessionUser.Avatar}" alt="User Avatar" class="UserAvatarXSmall">
+                <img id="userAvatar" src="${sessionUser.Avatar}" alt="User Avatar" class="UserAvatarXSmall">
                 <span id="userName">${sessionUser.Name}</span>
             </div>
             <div class="dropdown-divider"></div>
