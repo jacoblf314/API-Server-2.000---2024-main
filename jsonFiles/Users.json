@@ -11,7 +11,7 @@
   },
   {
     "Authorizations": { "readAccess": 2, "writeAccess": 2 },
-    "Created": 1733865287,
+    "Created": 1734029440,
     "VerifyCode": "verified",
     "Email": "nicolaschourot@gmail.ca",
     "Password": "password",
@@ -53,12 +53,12 @@
   },
   {
     "Authorizations": { "readAccess": 1, "writeAccess": 1 },
-    "Created": 1734028517,
-    "VerifyCode": 712981,
-    "Email": "jacoblebelfrenette@gmail.com",
+    "Created": 1734030678,
+    "VerifyCode": "verified",
+    "Email": "jacoblf314@gmail.com",
     "Password": "password",
-    "Name": "jacobie",
-    "Avatar": "3127d4a0-b8b5-11ef-9c31-1538b8cdab36.png",
-    "Id": "cbe43750-b8b4-11ef-9c31-1538b8cdab36"
+    "Name": "jacob",
+    "Avatar": "dd42f510-b8bc-11ef-b189-1f48fdb338dd.png",
+    "Id": "dd42ce00-b8bc-11ef-b189-1f48fdb338dd"
   }
 ]

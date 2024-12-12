@@ -1,7 +1,7 @@
 class Accounts_API {
-    static API_URL() { return "http://localhost:5000/api/accounts"; }
-    static CONTROLLER_URL() { return "http://localhost:5000/accounts"; }
-    static LIKES_URL() { return "http://localhost:5000/likes"; }
+    static API_URL() { return "https://disco-omniscient-rondeletia.glitch.me/api/accounts"; }
+    static CONTROLLER_URL() { return "https://disco-omniscient-rondeletia.glitch.me/accounts"; }
+    static LIKES_URL() { return "https://disco-omniscient-rondeletia.glitch.me/likes"; }
 
     static initHttpState() {
         this.currentHttpError = "";
@@ -147,6 +147,7 @@ class Accounts_API {
         });
     }
     static async Register(data) {
+        console.log(data);
         Accounts_API.initHttpState();
         return new Promise(resolve => {
             $.ajax({
