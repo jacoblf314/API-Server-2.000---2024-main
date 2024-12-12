@@ -1,7 +1,7 @@
 class Accounts_API {
-    static API_URL() { return "https://pitch-jumpy-yarrow.glitch.me/api/accounts"; }
-    static CONTROLLER_URL() { return "https://pitch-jumpy-yarrow.glitch.me/accounts"; }
-    static LIKES_URL() { return "https://pitch-jumpy-yarrow.glitch.me/likes"; }
+    static API_URL() { return "https://sand-adhesive-paneer.glitch.me/api/accounts"; }
+    static CONTROLLER_URL() { return "https://sand-adhesive-paneer.glitch.me/accounts"; }
+    static LIKES_URL() { return "https://sand-adhesive-paneer.glitch.me/likes"; }
 
     static initHttpState() {
         this.currentHttpError = "";
