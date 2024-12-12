@@ -1,0 +1,222 @@
+
+/* Styling for the form content */
+#connexionForm {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Restricts form width */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Add a fade-in effect for better UX */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styling for the form elements */
+#connexionForm label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#connexionForm input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#connexionForm .btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#connexionForm .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+#connexionForm .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+/* Styling for the button container */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; /* Add spacing between buttons */
+    margin-top: 1.5rem;
+}
+
+/* General button styling */
+.form-buttons .btn {
+    display: inline-block;
+    width: 48%; /* Adjusts width for consistent sizing */
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Primary button */
+.form-buttons .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-buttons .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Secondary button */
+.form-buttons .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.form-buttons .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.02);
+}
+
+/* Danger button */
+.form-buttons .btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.form-buttons .btn-danger:hover {
+    background-color: #b02a37;
+    transform: scale(1.02);
+}
+/* Container for the user management section */
+.user-management-container {
+    width: 100%;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid layout for the user management table */
+.user-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the table headers */
+.user-grid-header {
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.user-grid-body {
+    display: contents;
+}
+
+.user-grid-cell {
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+.user-grid-cell button {
+    margin-right: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-success {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    width: 100%;
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    width: 100%;
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.blocked {
+    color: #dc3545;  
+    font-weight: bold;
+}
+
+.active {
+    color: #28a745; 
+    font-weight: bold;
+}
+
+.user-grid-cell:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}
+
+.user-grid-row {
+    background-color: #ffffff;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.user-grid-body .user-grid-row:last-child {
+    border-bottom: none;
+}
