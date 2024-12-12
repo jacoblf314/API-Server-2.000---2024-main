@@ -997,7 +997,8 @@ function renderAccountCreationForm(account = null) {
     `);
 
     initImageUploaders();
-    addConflictValidation("http://localhost:5000/accounts/conflict", "Email", "saveAccount");
+    initFormValidation();
+    addConflictValidation("https://brave-absorbed-cherry.glitch.me", "Email", "saveAccount");
     
 
     $('#accountForm').on("submit", async function (event) {
