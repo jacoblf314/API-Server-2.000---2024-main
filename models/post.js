@@ -9,6 +9,7 @@ export default class Post extends Model {
         this.addField('Category', 'string');
         this.addField('Image', 'asset');
         this.addField('Date', 'integer');
+        this.addField('AuthorId', "string");
 
         this.setKey("Title");
     }

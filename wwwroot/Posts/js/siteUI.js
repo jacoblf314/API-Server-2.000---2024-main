@@ -255,7 +255,9 @@ async function renderPosts(queryString) {
 function renderPost(post, loggedUser) {
     let date = convertToFrenchDate(UTC_To_Local(post.Date));
     let crudIcon = '';
-    if (sessionUser && sessionUser.Authorizations && sessionUser.Authorizations.readAccess >= 2 && sessionUser.Authorizations.writeAccess >= 2) {
+    if (sessionUser && sessionUser.Authorizations &&
+        ((sessionUser.Authorizations.readAccess >= 3 && sessionUser.Authorizations.writeAccess >= 3) || 
+        sessionUser.Id === post.AuthorId)) {
         crudIcon =
         `
         <span class="editCmd cmdIconSmall fa fa-pencil" style="margin-right: 10px" postId="${post.Id}" title="Modifier nouvelle"></span>
@@ -618,7 +620,8 @@ function renderVerifyForm() {
 
         let response = await Accounts_API.Verify(sessionUser.Id, verificationCode);
         if (!Accounts_API.error) {
-            showPosts(); 
+            sessionStorage.setItem("user", JSON.stringify(response));
+            sessionUser = JSON.parse(sessionStorage.getItem("user"));
         } else {
             console.log(Accounts_API.currentHttpError);
             showError("Une erreur est survenue lors de la vérification.");
@@ -931,15 +934,15 @@ function renderAccountCreationForm(account = null) {
                 />
             </div>
 
-            <div class="form-box">
+           <div class="form-box">
                 <label for="Password" class="form-label">Mot de passe</label>
                 <input 
                     class="form-control Password"
                     name="Password" 
                     id="Password" 
                     placeholder="Mot de passe"
-                    required
-                    RequireMessage="Veuillez entrer un mot de passe"
+                    ${create ? "required" : ""}
+                    RequireMessage="${create ? "Veuillez entrer un mot de passe" : ""}"
                     InvalidMessage="Le mot de passe est invalide" 
                     type="password"
                     value=""
@@ -951,8 +954,8 @@ function renderAccountCreationForm(account = null) {
                     name="ConfirmPassword" 
                     id="ConfirmPassword" 
                     placeholder="Confirmez le mot de passe"
-                    required
-                    RequireMessage="Veuillez confirmer le mot de passe"
+                    ${create ? "required" : ""}
+                    RequireMessage="${create ? "Veuillez confirmer le mot de passe" : ""}"
                     InvalidMessage="Les mots de passe ne correspondent pas"
                     type="password"
                     value=""
@@ -995,7 +998,7 @@ function renderAccountCreationForm(account = null) {
     `);
 
     initImageUploaders();
-    create ? addConflictValidation("http://localhost:5000/accounts/conflict", "Email", "saveAccount") : ""
+    addConflictValidation("http://localhost:5000/accounts/conflict", "Email", "saveAccount");
     
 
     $('#accountForm').on("submit", async function (event) {
@@ -1114,7 +1117,8 @@ function renderPostForm(post = null) {
     $("#form").append(`
         <form class="form" id="postForm">
             <input type="hidden" name="Id" value="${post.Id}"/>
-             <input type="hidden" name="Date" value="${post.Date}"/>
+            <input type="hidden" name="Date" value="${post.Date}"/>
+            <input type="hidden" name="AuthorId" value="${sessionUser.Id || ""}" />
             <label for="Category" class="form-label">Catégorie </label>
             <input 
                 class="form-control"
@@ -1177,6 +1181,7 @@ function renderPostForm(post = null) {
         if (create || !('keepDate' in post))
             post.Date = Local_to_UTC(Date.now());
         delete post.keepDate;
+        console.log(post);
         post = await Posts_API.Save(post, create);
         if (!Posts_API.error) {
             await showPosts();

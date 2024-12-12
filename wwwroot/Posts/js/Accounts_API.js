@@ -1,7 +1,7 @@
 class Accounts_API {
-    static API_URL() { return "https://regal-right-carpenter.glitch.me/api/accounts"; }
-    static CONTROLLER_URL() { return "https://regal-right-carpenter.glitch.me/accounts"; }
-    static LIKES_URL() { return "https://regal-right-carpenter.glitch.me/likes"; }
+    static API_URL() { return "http://localhost:5000/api/accounts"; }
+    static CONTROLLER_URL() { return "http://localhost:5000/accounts"; }
+    static LIKES_URL() { return "http://localhost:5000/likes"; }
 
     static initHttpState() {
         this.currentHttpError = "";
