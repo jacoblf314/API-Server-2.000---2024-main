@@ -340,7 +340,7 @@ function updateDropDownMenu() {
                 <div class="dropdown-divider"></div>
             `;
         }
-        let trimmedAvatar = avatarUrl.substring(sessionUser.Avatar.indexOf("assetsRepository/"));
+        let trimmedAvatar = sessionUser.Avatar.substring(sessionUser.Avatar.indexOf("assetsRepository/"));
         DDMenu.append(`
             <div class="dropdown-item"">
                 <img id="userAvatar" src="${trimmedAvatar}" alt="User Avatar" class="UserAvatarXSmall">
