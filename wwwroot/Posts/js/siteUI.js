@@ -999,7 +999,7 @@ function renderAccountCreationForm(account = null) {
 
     initImageUploaders();
     initFormValidation();
-    addConflictValidation("https://accessible-malleable-bovid.glitch.me", "Email", "saveAccount");
+    addConflictValidation("https://pitch-jumpy-yarrow.glitch.me", "Email", "saveAccount");
     
 
     $('#accountForm').on("submit", async function (event) {
