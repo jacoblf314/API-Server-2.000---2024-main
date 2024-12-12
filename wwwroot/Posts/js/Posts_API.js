@@ -1,6 +1,6 @@
 
 class Posts_API {
-    static API_URL() { return "https://imaginary-omniscient-chopper.glitch.me/api/posts" };
+    static API_URL() { return "https://north-hill-look.glitch.me/api/posts" };
     static initHttpState() {
         this.currentHttpError = "";
         this.currentStatus = 0;

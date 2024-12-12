@@ -1,7 +1,7 @@
 class Accounts_API {
-    static API_URL() { return "https://imaginary-omniscient-chopper.glitch.me/api/accounts"; }
-    static CONTROLLER_URL() { return "https://imaginary-omniscient-chopper.glitch.me/accounts"; }
-    static LIKES_URL() { return "https://imaginary-omniscient-chopper.glitch.me/likes"; }
+    static API_URL() { return "https://north-hill-look.glitch.me/api/accounts"; }
+    static CONTROLLER_URL() { return "https://north-hill-look.glitch.me/accounts"; }
+    static LIKES_URL() { return "https://north-hill-look.glitch.me/likes"; }
 
     static initHttpState() {
         this.currentHttpError = "";
